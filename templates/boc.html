@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BoCs Predictor</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="footer, contact, form, icons" />
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../static/css/boc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+  </head>
+  <body>
+    <div class="well well-lg">
+    <div class="w3-container">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+            <img style="float:left" src="../static/images/logo.png" width=50% height=50%>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="linkh"><a href="http://localhost:5000/"><span style="color:white; font-size:15px; font-weight:bold;">Home</span></a></li>
+            <li class="linkh"><a href="http://localhost:5000/feed"><span style="color:white; font-size:15px; font-weight:bold;">Feed Ratings</span></a></li>
+            <li class="linka"><a href="http://localhost:5000/boc"><span style="color:white; font-size:15px; font-weight:bold;">BoCs Predictor</span></a></li>
+            </ul>
+        </div>
+      </nav>
+    </div>
+
+    <br><br><br>
+
+    <h1><span style="color: red; font-weight: bold; font-family: sans-serif">Box Office Predictor</span></h1>
+    <div>
+      <form action="http://localhost:5000/bocp" method="post">
+        <label for="title"><span style="color: red; font-size: 20px; font-family: Garamond;">Movie Title *</label>
+        <input type="text" name="Title" id="title" placeholder="Movie Name" required>
+        <br /><br />
+
+        <fieldset>
+			  <legend>Pre-Release Features:</legend>
+				<label for="budget" class="float"><strong>Budget(in $) <span style="color: red; font-size: 20px">*</span></strong></label>
+				<input class="budget" name="Budget" id="budget" type="text" size="30" required><br />
+				<label for="nsc" class="float" ><strong>No. of Screens <span style="color: red; font-size: 20px">*</span></strong></label>
+				<input class="nsc" name="Number of Screens"  id="nsc" type="text" size="30" required>
+        <label for="avg" class="float" ><strong>Average Rating <span style="color: red; font-size: 20px">*</span></strong></label>
+				<input class="avg" name="Average Rating"  id="avg" type="text" size="30" required>
+        </fieldset>
+
+        <fieldset class="pm">
+			       <legend>Genres</legend>
+             <div class="row checkbox-group">
+               <div class="col-xs-6">
+                 <label for="option1" class="choose"><input class="choose" name="Genres" id="option1" type="checkbox" value="Drama" /> &nbsp; Drama </label>
+                 <label for="option2" class="choose"><input class="choose" name="Genres" id="option2" type="checkbox" value="Animation" /> &nbsp; Animation </label>
+                 <label for="option3" class="choose"><input class="choose" name="Genres" id="option3" type="checkbox" value="Comedy" /> &nbsp; Comedy </label>
+                 <label for="option4" class="choose"><input class="choose" name="Genres" id="option4" type="checkbox" value="Musical" /> &nbsp; Musical </label>
+                 <label for="option5" class="choose"><input class="choose" name="Genres" id="option5" type="checkbox" value="Adventure" /> &nbsp; Adventure </label>
+                 <label for="option6" class="choose"><input class="choose" name="Genres" id="option6" type="checkbox" value="Romance" /> &nbsp; Romance </label>
+                 <label for="option7" class="choose"><input class="choose" name="Genres" id="option7" type="checkbox" value="Horror" /> &nbsp; Horror </label>
+                 <label for="option8" class="choose"><input class="choose" name="Genres" id="option8" type="checkbox" value="Sport" /> &nbsp; Sport </label>
+                 <label for="option9" class="choose"><input class="choose" name="Genres" id="option9" type="checkbox" value="Other" /> &nbsp; Other </label>
+               </div>
+               <div class="col-xs-6">
+                 <label for="option10" class="choose"><input class="choose" name="Genres" id="option10" type="checkbox" value="Thriller" /> &nbsp; Thriller </label>
+                 <label for="option11" class="choose"><input class="choose" name="Genres" id="option11" type="checkbox" value="Fantasy" /> &nbsp; Fantasy </label>
+                 <label for="option12" class="choose"><input class="choose" name="Genres" id="option12" type="checkbox" value="Mystery" /> &nbsp; Mystery </label>
+                 <label for="option13" class="choose"><input class="choose" name="Genres" id="option13" type="checkbox" value="Action" /> &nbsp; Action </label>
+                 <label for="option14" class="choose"><input class="choose" name="Genres" id="option14" type="checkbox" value="Sci-Fi" /> &nbsp; Sci-Fi </label>
+                 <label for="option15" class="choose"><input class="choose" name="Genres" id="option15" type="checkbox" value="Biography" /> &nbsp; Biography </label>
+                 <label for="option16" class="choose"><input class="choose" name="Genres" id="option16" type="checkbox" value="Crime" /> &nbsp; Crime </label>
+                 <label for="option17" class="choose"><input class="choose" name="Genres" id="option17" type="checkbox" value="History" /> &nbsp; History </label>
+               </div>
+             </div>
+				  </fieldset>
+          <fieldset>
+  			       <legend>Cast Information:</legend>
+  				     <label for="a1" class="float"><strong>Actor 1 Name: <span style="color: red; font-size: 20px">*</span></strong></label>
+  				     <input class="a1" name="Actor 1's Name" id="a1" type="text" size="30" required/>
+               <label for="a2" class="float"><strong>Actor 2 Name: </strong></label>
+  				     <input class="a2" name="Actor 2's Name" id="a2" type="text" size="30" />
+               <label for="a3" class="float"><strong>Actor 3 Name: </strong></label>
+  				     <input class="a3" name="Actor 3's Name" id="a4" type="text" size="30" />
+               <label for="a4" class="float"><strong>Actor 4 Name: </strong></label>
+  				     <input class="a4" name="Actor 4's Name" id="a4" type="text" size="30" />
+  				</fieldset>
+          <fieldset>
+  			       <legend>MPAA Certification</legend>
+               <div class="row radio-group">
+                 <div class="col-xs-6">
+                   <label for="option1c" class="choosec"><input class="choosec" name="MPAA Certification" id="option1c" type="radio" value="PG-13" /> &nbsp; PG-13 </label>
+                   <label for="option2c" class="choosec"><input class="choosec" name="MPAA Certification" id="option2c" type="radio" value="PG" /> &nbsp; PG </label>
+                   <label for="option3c" class="choosec"><input class="choosec" name="MPAA Certification" id="option3c" type="radio" value="G" checked = "checked"/> &nbsp; G </label>
+                 </div>
+                 <div class="col-xs-6">
+                   <label for="option4c" class="choosec"><input class="choosec" name="MPAA Certification" id="option4c" type="radio" value="NC-17" /> &nbsp; NC-17 </label>
+                   <label for="option5c" class="choosec"><input class="choosec" name="MPAA Certification" id="option5c" type="radio" value="R" /> &nbsp; R </label>
+                   </div>
+               </div>
+  				</fieldset>
+          <fieldset>
+  			       <legend>Tentative Features:</legend>
+  				     <label for="rd" class="float"><strong>Release Date: </strong></label>
+  				     <input class="rd" name="Release Date" id="rd" type="date" size="30" />
+               <label for="rt" class="float"><strong>Runtime: </strong></label>
+  				     <input class="rt" name="Runtime" id="rt" type="text" size="30" />
+               <label for="ph" class="float"><strong>Productive House: </strong></label>
+  				     <input class="ph" name="Production House" id="ph" type="text" size="30" />
+               <label for="dn" class="float"><strong>Director Name: </strong></label>
+  				     <input class="dn" name="Director's Name" id="dn" type="text" size="30" />
+               <label for="wn" class="float"><strong>Writers Name: </strong></label>
+  				     <input class="wn" name="Writer's Name" id="wn" type="text" size="30" />
+          </fieldset>
+
+      		<fieldset>
+      			<legend>Plot of Movie: </legend>
+      			<textarea name="Plot" id="message" cols="30" rows="5" title="Note or message"></textarea><br />
+      			<!--<label class="spam-protection" for="protection">Spam protection  <strong>&nbsp;6&nbsp;+&nbsp;5&nbsp;=</strong></label><br />
+      			<input class="answer" type="text" name="antispam" id="protection" size="5" />-->
+      		</fieldset>
+      		<!-- ============================== Fieldset 3 end ============================== -->
+
+      		<p><input class="submit-button" id="submit" type="submit" alt="SUBMIT" name="Submit" value="SUBMIT" onclick="getform()"/></p>
+          </form>
+    </div>
+  </div>
+    <footer class="footer-distributed">
+  		<div class="footer-left">
+        <img style="float:left" src="../static/images/logo_dark.png" width=50% height=50%>
+  			<br><br><br><br><br>
+        <p class="footer-links">
+    		<a href="http://localhost:5000/">Home</a>
+    		.
+    		<a href="http://localhost:5000/about">About</a>
+    		·
+    		<a href="http://localhost:5000/contact">Contact</a>
+    		</p>
+        <p class="footer-company-name">BoCs &copy; 2018</p>
+  			<div class="footer-icons">
+  			<a class="cc" href="https://www.facebook.com/lokaks1312"><i class="fa fa-facebook-official"></i></a>
+  			<a class="cc" href="https://twitter.com/BoCs38308609?lang=en"><i class="fa fa-twitter"></i></a>
+  			<a class="cc" href="https://www.linkedin.com/in/lokesh-aggarwal-2b770315a/"><i class="fa fa-linkedin"></i></a>
+        <a class="cc" href="https://github.com/LA1997"><i class="fa fa-github"></i></a>
+  			</div>
+  		</div>
+  		<div class="footer-right">
+  			<p>Contact Us</p>
+  			<form action="https://mail.google.com/mail/u/0/?to=abc@example.com#inbox?compose=new" method="post">
+  				<input type="text" id="email" name="email" placeholder="Email" />
+  				<textarea name="message" id="message" placeholder="Message"></textarea>
+  				<button>Send</button>
+  			</form>
+  		</div>
+  	</footer>
+  </body>
+</html>
