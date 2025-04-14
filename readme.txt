@@ -1,17 +1,41 @@
-Hello
+```markdown
+# Bocs: A Box Office Prediction Algorithm
 
-The following are the steps explained to run this web app "BoCS - The Box Office Predictor": 
+Bocs is a machine learning-based project designed to predict the box office performance of movies before release. Using a variety of data sources and advanced algorithms, Bocs helps stakeholders make informed decisions about marketing, production, and distribution strategies.
 
-	1) First open the terminal and go to the folder BOCS from the terminal.
-	2) Then run the command :
-		source myFlaskEnv/bin/activate
-	
-	3) Now, run the server using the command:
-		python back.py
+## Features
+- Predicts a movie's opening weekend and total box office gross.
+- Utilizes a wide range of features such as cast, director, genre, budget, release date, and promotional data.
+- Incorporates advanced feature engineering to handle text and numerical data.
+- Implements state-of-the-art machine learning models for accurate predictions.
 
-	4) After the server runs successfully, use this github url to access the front end:
-		
-		
-	5) You are ready to predict the bocs office of a movie and give ratings to your favourite movies.
+## Dataset
+The project utilizes datasets sourced from:
+- IMDB: Movie details including cast, director, and ratings.
+- TMDb: Genre, runtime, and user reviews.
+- Box Office Mojo: Historical box office data.
+- Social media platforms: Hype and sentiment analysis.
 
-Note: Do not change the directories and files location in BOCS folder and do not delete any files in it.
+## Models Used
+- Linear Regression
+- Random Forest
+- XGBoost
+- Neural Networks (for handling complex interactions)
+
+## Key Techniques
+- **Feature Engineering**: Extracted sentiment scores from reviews, performed one-hot encoding for categorical variables, and engineered features like star power and director popularity.
+- **Data Preprocessing**: Handled missing data, scaled numerical features, and tokenized textual data.
+- **Model Optimization**: Used GridSearchCV and RandomizedSearchCV for hyperparameter tuning.
+- **Evaluation Metrics**: Evaluated models using RMSE, MAE, and R2-score for robust performance analysis.
+
+## Results
+- **Best Performing Model**: Random Forest with RMSE of 12.3M and R2-score of 0.87.
+- The algorithm identifies significant predictors such as budget, marketing expenditure, and genre popularity, providing actionable insights.
+
+## Future Enhancements
+- Integrate real-time social media data for dynamic predictions.
+- Expand the dataset to include international releases.
+- Develop a web-based interface for easier access and visualization.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
