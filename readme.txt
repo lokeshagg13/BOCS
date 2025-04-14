@@ -1,4 +1,3 @@
-```markdown
 # Bocs: A Box Office Prediction Algorithm
 
 Bocs is a machine learning-based project designed to predict the box office performance of movies before release. Using a variety of data sources and advanced algorithms, Bocs helps stakeholders make informed decisions about marketing, production, and distribution strategies.
